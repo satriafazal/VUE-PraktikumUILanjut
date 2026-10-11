@@ -40,7 +40,7 @@ const breadcrumbs = computed(() => {
 </script>
 
 <template>
-  <nav class="breadcrumb" v-if="breadcrumbs.length > 0">
+  <nav class="breadcrumb" v-if="breadcrumbs.length > 1">
     <ul>
       <li v-for="(crumb, index) in breadcrumbs" :key="index">
         <span v-if="index > 0" class="separator">/</span>
