@@ -8,7 +8,9 @@ import Breadcrumb from '@/components/app/Breadcrumb.vue'
     <Navbar />
     <main class="main-content">
       <Breadcrumb />
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <component :is="Component" />
+      </router-view>
     </main>
   </div>
 </template>
