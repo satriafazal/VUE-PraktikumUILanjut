@@ -5,7 +5,9 @@
       <p>Find the events and categories that matter most to you.</p>
     </div>
     <div class="browse-content">
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <component :is="Component" />
+      </router-view>
     </div>
   </div>
 </template>
